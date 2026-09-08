@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>More of me</title>
+
+  <link rel="stylesheet" href="linktree-style.css">
+</head>
+
+<body>
+
+  <main class="page">
+
+    <section class="card">
+
+      <!-- Foto de perfil -->
+      <div class="profile">
+        <img src="./assets/img-1.png" alt="Foto de perfil">
+      </div>
+
+      <!-- Nome -->
+      <h1 class="profile-name">
+        Bianca
+      </h1>
+
+      <!-- Status -->
+      <div class="status">
+        online
+      </div>
+
+      <!-- Localização -->
+      <p class="location">
+        <img src="https://img.icons8.com/?size=100&id=13800&format=png&color=000000" class="location-icon"/> <span id="location">Detectando localização...</span>
+      </p>
+
+      <!-- Descrição -->
+      <div class="description">
+        <div class="description-text1">
+          <p >Your favorite Brazilian trans  </p>
+          <img src="https://img.icons8.com/?size=100&id=iHI2gDXCsMzH&format=png&color=000000" alt="brazil-icon" class="location-brazil"/>
+        </div>
+        <div class="description-text1">
+          <img src="https://img.icons8.com/?size=100&id=JqFP89u5slPn&format=png&color=000000" alt="brazil-icon" class="location-brazil"/>
+          <div style="display: flex; align-items: center; ">
+            <p>Want to see my</p> <img src="https://img.icons8.com/?size=100&id=kQs5iqwxfvbp&format=png&color=000000" alt="brazil-icon" class="location-brazil"/> ?
+          </div>
+        </div>
+
+        <div class="description-text1">
+          <img src="https://img.icons8.com/?size=100&id=9vOXznCXSrGG&format=png&color=000000" alt="brazil-icon" class="location-brazil"/>
+          <p >CLICK HERE</p>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div class="links">
+
+        <a href="https://t.me/+fcX9TVW7AklmNzNk" class="link link-blue"target="_blank">
+          <img src="https://img.icons8.com/?size=100&id=oWiuH0jFiU0R&format=png&color=000000" alt="brazil-icon" class="link-icon"/>
+          My previews
+          <img src="https://img.icons8.com/?size=100&id=l24cyKyOwOjt&format=png&color=000000" alt="brazil-icon" style="width: 24px; height: 24px; margin: 5px"/>
+          (Telegram)
+        </a>
+
+        <a href="https://onlyfanswollf.netlify.app/wollf.bianca.html" class="link link-blue"target="_blank">
+          <img src="https://img.icons8.com/?size=100&id=ELqBBQinKctx&format=png&color=000000" alt="brazil-icon" class="link-icon"/>
+          Onlyfans (50% OFF)
+        </a>
+
+      </div>
+
+      <!-- Rodapé -->
+      <footer class="footer">
+        All images rights reserved to Bianca under Law No. 9.610/98
+      </footer>
+
+    </section>
+
+  </main>
+
+  <script>
+    async function getLocation() {
+      const locationElement = document.getElementById("location");
+
+      try {
+        const response = await fetch("https://ipwho.is/");
+        const data = await response.json();
+
+        if (data.success) {
+          locationElement.textContent =
+            `${data.city} - ${data.region}`;
+        } else {
+          locationElement.textContent =
+            "Localização indisponível";
+        }
+
+      } catch (error) {
+        console.error(error);
+
+        locationElement.textContent =
+          "Localização indisponível";
+      }
+    }
+
+    getLocation();
+  </script>
+
+</body>
+</html>
