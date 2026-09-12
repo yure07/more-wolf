@@ -182,6 +182,10 @@ body {
   background: linear-gradient(180deg, #25aee4 0%, #159ed4 100%);
 }
 
+.link-zap {
+  background-color: #26d367;
+}
+
 /* Green button */
 .link-green {
   background: linear-gradient(180deg, #25d667 0%, #20c85e 100%);
