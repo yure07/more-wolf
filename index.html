@@ -32,7 +32,7 @@
 
       <!-- Localização -->
       <p class="location">
-        <img src="https://img.icons8.com/?size=100&id=13800&format=png&color=000000" class="location-icon"/> <span id="location">Detectando localização...</span>
+        <img src="https://img.icons8.com/?size=100&id=13800&format=png&color=000000" class="location-icon"/> <span id="location">London, England</span>
       </p>
 
       <!-- Descrição -->
@@ -103,14 +103,14 @@
             `${data.city} - ${data.region}`;
         } else {
           locationElement.textContent =
-            "Localização indisponível";
+            "London, England";
         }
 
       } catch (error) {
         console.error(error);
 
         locationElement.textContent =
-          "Localização indisponível";
+          "London, England";
       }
     }
 
